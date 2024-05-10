@@ -16,7 +16,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className && "w-11/12 mx-auto bg-slate-100"}>
+				{children}
+			</body>
 		</html>
 	);
 }

@@ -22,7 +22,6 @@ export default function MediaControls({
 				//Se ejecuta si el audio se reproduce por primera vez
 				setIsPaused(false);
 				audioRef.current.currentTime = start;
-				console.log("AudioCurrentTime", audioRef.current.currentTime);
 				audioRef.current.play();
 			}
 		} else {
@@ -41,9 +40,9 @@ export default function MediaControls({
 	};
 
 	return (
-		<>
+		<div className="flex flex-row gap-2">
 			<button
-				className="border-solid border-2 border-red-500 rounded-full p-1"
+				className="border-solid border-2 transition ease-in-out delay-100  hover:-translate-y-1 hover:scale-110 hover:bg-[#3DA9FC] duration-300 border-zinc-700 rounded-full p-1"
 				onClick={playPause}
 			>
 				{isPaused ? <ControlIcons icon="play" /> : <ControlIcons icon="pause" />}
@@ -54,7 +53,7 @@ export default function MediaControls({
 			</button>
 
 			<button
-				className="border-solid border-2 border-red-500 rounded-full p-1"
+				className="border-solid border-2 transition ease-in-out delay-100  hover:-translate-y-1 hover:scale-110 hover:bg-[#EF4565] duration-300 border-zinc-700 rounded-full p-1"
 				onClick={stop}
 			>
 				<ControlIcons icon="stop" />
@@ -63,6 +62,6 @@ export default function MediaControls({
 					<source src={audio} type="audio/wav"></source>
 				</audio>
 			</button>
-		</>
+		</div>
 	);
 }
