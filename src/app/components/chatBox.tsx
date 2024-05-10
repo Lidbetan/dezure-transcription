@@ -13,23 +13,13 @@ export default function ChatBox({ msg }: { msg: Itranscripted }) {
 			{msg.role === "user" && (
 				<div>
 					<UserMsg msg={msg} />
-					<PartialAudio
-						audio={audioFile}
-						role={msg.role}
-						start={msg.start}
-						end={msg.end}
-					/>
+					<PartialAudio audio={audioFile} start={msg.start} end={msg.end} />
 				</div>
 			)}
 			{msg.role === "agent" && (
 				<div>
 					<AgentMsg msg={msg} />
-					<PartialAudio
-						audio={audioFile}
-						role={msg.role}
-						start={msg.start}
-						end={msg.end}
-					/>
+					<PartialAudio audio={audioFile} start={msg.start} end={msg.end} />
 				</div>
 			)}
 		</div>

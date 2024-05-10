@@ -1,20 +1,14 @@
-import { useRef } from "react";
+"use client";
+
+import MediaControls from "./mediaButtons/mediaControls";
 
 export default function CompleteAudio({ audio }: { audio: string }) {
-	const audioRef = useRef<HTMLMediaElement>(null);
-	const playAll = () => {
-		audioRef.current?.play();
-	};
-
 	return (
-		<button
-			className="border-solid border-2 border-red-500 rounded-full p-3"
-			onClick={playAll}
-		>
-			Audio Completo
-			<audio ref={audioRef}>
-				<source src={audio} type="audio/wav"></source>
-			</audio>
-		</button>
+		<>
+			<button>
+				Complete Audio
+				<MediaControls audio={audio} start={0} />
+			</button>
+		</>
 	);
 }
