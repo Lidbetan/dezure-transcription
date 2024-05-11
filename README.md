@@ -35,3 +35,7 @@ Siguiendo esos pasos y  estando posicionado con la terminal en la carpeta front,
 ```
 Finalmente haga Ctrl + Click en el link localhost 
 
+## Deploy
+
+https://dezure-transcription.vercel.app/
+
