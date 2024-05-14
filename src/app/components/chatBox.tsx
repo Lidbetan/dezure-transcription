@@ -18,13 +18,13 @@ export default function ChatBox({ msg }: { msg: Itranscripted }) {
 			}
 		>
 			{msg.role === "user" && (
-				<div className="flex flex-col w-10/12 items-end gap-3 p-3 shadow-md hover:-translate-x-0.5 transition ease-in delay-300 hover:shadow-lg rounded-lg">
+				<div className=" bg-white flex flex-col w-10/12 items-end gap-3 p-3 shadow-md hover:translate-x-2 transition ease-in delay-300 hover:shadow-lg rounded-lg">
 					<UserMsg msg={msg} />
 					<PartialAudio audio={audioFile} start={msg.start} end={msg.end} />
 				</div>
 			)}
 			{msg.role === "agent" && (
-				<div className="flex flex-col w-10/12 items-start gap-3 p-3 shadow-md hover:-translate-x-2 transition ease-in delay-300 hover:shadow-lg rounded-lg">
+				<div className=" bg-white flex flex-col w-10/12 items-start gap-3 p-3 shadow-md hover:-translate-x-2 transition ease-in delay-300 hover:shadow-lg rounded-lg">
 					<AgentMsg msg={msg} />
 					<PartialAudio audio={audioFile} start={msg.start} end={msg.end} />
 				</div>
