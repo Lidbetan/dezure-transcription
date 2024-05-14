@@ -10,7 +10,7 @@ export default async function Home() {
 
 	return (
 		<main>
-			<div className="flex flex-col justify-center w-full md:w-4/12 mx-auto items-center my-4">
+			<div className="flex flex-col justify-center w-full md:w-9/12 lg:w-7/12 xl:w-4/12 mx-auto items-center my-4">
 				<CompleteAudio audio={audioFile} />
 				{data &&
 					data.map((msg) => (
